@@ -22,7 +22,7 @@ def openEyeCheck(inpIm, model=None):
             nn.Linear(in_features=100, out_features=1, bias=True)
         )
         model = model.to(DEVICE)
-        model.load_state_dict(torch.load('../weights/weights_mn_40.pth'))
+        model.load_state_dict(torch.load('../weights/weights_mn_50.pth'))
         model.eval()
     
     image = torch.FloatTensor(np.array(load_sample(inpIm))).to(DEVICE).view(1,1,24,24) / 255
